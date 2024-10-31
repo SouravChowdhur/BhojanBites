@@ -11,7 +11,7 @@ const FoodItems = () => {
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="flex flex-wrap gap-10 justify-center lg:justify-start mx-14 my-10">
+      <div className="flex flex-wrap gap-10 justify-center lg:justify-start mx-20 my-10">
         {FoodData.filter((food) => {
           if (category === "All") {
             return food.name.toLowerCase().includes(search.toLowerCase());
