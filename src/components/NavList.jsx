@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 
 const NavList = ({ toggleNav, setToggleNav, auth }) => {
   const handleLogout = async () => {
-    const res = await axios.get("https://bhojanbitesbackend.onrender.com/api/logout");
+    const res = await axios.get("https://bhojanbitesbackend.onrender.com/api/logout", {
+      withCredentials: true,
+    });
     const data = await res.data;
     toast.success(data.message);
-    window.location.href = "/";
+    window.location.replace = "/";
   };
 
   return (
