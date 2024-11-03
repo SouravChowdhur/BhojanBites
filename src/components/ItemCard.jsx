@@ -14,7 +14,7 @@ const ItemCard = ({ id, name, quantity, price, image, _id }) => {
 
   const removeFromCart = async (id) => {
     const res = await axios.delete(
-      `http://localhost:5000/api/remove-from-cart/${id}`
+      `https://bhojanbitesbackend.onrender.com/api/remove-from-cart/${id}`
     );
     const data = await res.data;
     toast.success(data.message);
@@ -23,7 +23,7 @@ const ItemCard = ({ id, name, quantity, price, image, _id }) => {
 
   const incrementQuantity = async (id) => {
     const res = await axios.put(
-      `http://localhost:5000/api/increment-quantity/${id}`
+      `https://bhojanbitesbackend.onrender.com/api/increment-quantity/${id}`
     );
     const data = await res.data;
     getCart(user).then((data) => dispatch(setCart(data.cartItems)));
@@ -31,7 +31,7 @@ const ItemCard = ({ id, name, quantity, price, image, _id }) => {
 
   const decrementQuantity = async (id) => {
     const res = await axios.put(
-      `http://localhost:5000/api/decrement-quantity/${id}`
+      `https://bhojanbitesbackend.onrender.com/api/decrement-quantity/${id}`
     );
     const data = await res.data;
     getCart(user).then((data) => dispatch(setCart(data.cartItems)));

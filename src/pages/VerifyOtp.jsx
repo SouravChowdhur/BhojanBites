@@ -12,7 +12,7 @@ const VerifyOtp = () => {
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put("http://localhost:5000/api/verify-otp", {
+      const res = await axios.put("https://bhojanbitesbackend.onrender.com/api/verify-otp", {
         otp,
         newPassword: password,
       });
