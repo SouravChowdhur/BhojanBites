@@ -9,7 +9,7 @@ const NavList = ({ toggleNav, setToggleNav, auth }) => {
     });
     const data = await res.data;
     toast.success(data.message);
-    window.location.replace = "/";
+    window.location.href = "/";
   };
 
   return (
