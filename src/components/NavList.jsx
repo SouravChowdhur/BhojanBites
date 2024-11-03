@@ -7,7 +7,7 @@ const NavList = ({ toggleNav, setToggleNav, auth }) => {
     const res = await axios.get("https://bhojanbitesbackend.onrender.com/api/logout");
     const data = await res.data;
     toast.success(data.message);
-    window.location.href = "/";
+    window.location.replace = "/";
   };
 
   return (
