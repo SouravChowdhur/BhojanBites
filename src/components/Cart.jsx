@@ -61,7 +61,7 @@ const Cart = () => {
           </h3>
           <hr className="w-[90vw] lg:w-[18vw] my-2" />
           <button
-            onClick = {checkout}
+            onClick = {()=>{navigate("/success")}
             className="bg-pink-500 font-bold px-3 text-white py-2 rounded-lg w-[90vw] lg:w-[18vw] mb-5"
           >
             Checkout
